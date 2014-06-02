@@ -68,6 +68,10 @@ public class AccessPointListAdapter extends BaseAdapter {
             item = (BridgeListItem) convertView.getTag();
         }
         PHAccessPoint accessPoint = accessPoints.get(position);
+//        PHAccessPoint accessPoint = new PHAccessPoint();
+//        accessPoint.setIpAddress("192.168.1.11:8000");
+//        accessPoint.setUsername("newdeveloper");
+//        phHueSDK.connect(accessPoint);
         item.bridgeIp.setTextColor(Color.BLACK);
         item.bridgeIp.setText(accessPoint.getIpAddress());
         item.bridgeMac.setTextColor(Color.DKGRAY);

@@ -84,7 +84,12 @@ public class PHHomeActivity extends Activity implements OnItemClickListener {
             }
         }
         else {  // First time use, so perform a bridge search.
-            doBridgeSearch();
+            //doBridgeSearch();
+            PHAccessPoint lastAccessPoint = new PHAccessPoint();
+            lastAccessPoint.setIpAddress("192.168.1.11:8000");  // Enter the IP Address and Port your Emulator is running on here.
+            lastAccessPoint.setUsername("newdeveloper");        // newdeveloper is loaded by the emulator and set on the WhiteList.
+            phHueSDK.connect(lastAccessPoint);
+
         }
     }
 
